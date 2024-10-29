@@ -4,24 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "d": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^5.4.8"
+    "vite": "^5.4.9"
   },
-  "dependencies": {
-    "@mediapipe/face_detection": "~0.4.1646425229",
-    "@tensorflow-models/coco-ssd": "^2.2.3",
-    "@tensorflow-models/face-detection": "^1.0.2",
-    "@tensorflow-models/face-landmarks-detection": "^1.0.5",
-    "@tensorflow/tfjs": "^4.21.0",
-    "@tensorflow/tfjs-backend-wasm": "^4.21.0",
-    "@tensorflow/tfjs-backend-webgl": "^4.21.0",
-    "@tensorflow/tfjs-backend-webgpu": "^4.21.0",
-    "@tensorflow/tfjs-converter": "^4.21.0",
-    "@tensorflow/tfjs-core": "^4.21.0",
-    "scatter-gl": "0.0.8"
-  }
+  "packageManager": "pnpm@9.10.0+sha256.355a8ab8dbb6ad41befbef39bc4fd6b5df85e12761d2724bd01f13e878de4b13"
 }

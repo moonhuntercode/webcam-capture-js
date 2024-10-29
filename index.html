@@ -1,34 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>camera</title>
-  <!-- <script type="module" defer src="./src/main.js"></script> -->
-  <script type="module" src="./src/part-2.js"></script>
-  <style>
-    video{
-      display: block;
-      visibility: visible;
-    }
-  </style>
-</head>
-<body>
-    <!-- part 2 & 3 -->
-     <section id="webcam-section">
-        <section id="input">
-          <h2>Prediction using an image captured from the webcam</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+     <h2>Transfer learning</h2>
 
-          <button id="predict" disabled>Predict</button>
-          <button id="webcam">Webcam</button>
-          <button id="pause">Capture</button>
+    <!-- Part 1 -->
+    <!-- <button id="start">Start</button>
+    <div id="webcam-container" display="right: 0; position: absolute"></div>
+    <div id="label-container"></div> -->
 
-          <video ></video>
-          <canvas id="canvas"> </canvas>
+    <!-- Part 2 -->
+    <div id="status">Loading model...</div>
+
+    <div id="controller" style="display: none">
+      <div>
+        <section>
+          <button id="train">
+            <span id="train-status">TRAIN MODEL</span>
+          </button>
+          <button id="predict">START PREDICTIONS</button>
         </section>
 
-        <div id="predictions"></div>
-      </section>
+        <video
+          autoplay
+          playsinline
+          muted
+          id="webcam"
+          width="224"
+          height="224"
+        ></video>
+      </div>
 
-</body>
+      <div id="buttons-container">
+        <button class="record-button" id="left">Add left sample</button>
+        <p><span id="left-total">0</span> examples</p>
+        <button class="record-button" id="right">Add right sample</button>
+        <p><span id="right-total">0</span> examples</p>
+      </div>
+    </div>
+    <a href="#">record</a>
+    <div id="app"></div>
+    <script type="module" src="/main.js"></script>
+  </body>
 </html>
