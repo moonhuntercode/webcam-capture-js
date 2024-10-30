@@ -5,46 +5,48 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+      <script defer type="module" src="./main.js"></script>
+
+      <script defer type="module" src="./part2.js"></script>
+
   </head>
   <body>
-     <h2>Transfer learning</h2>
+   <div class="tfjs-example-container">
+      <h1>TensorFlow.js: Using a pre-trained model</h1>
 
-    <!-- Part 1 -->
-    <!-- <button id="start">Start</button>
-    <div id="webcam-container" display="right: 0; position: absolute"></div>
-    <div id="label-container"></div> -->
+      <!-- part 1 -->
+      <!-- <section id="uploaded-image">
+        <section id="input">
+          <h2>Prediction using an uploaded image</h2>
+          <div id="file-container">
+            <input type="file" id="file" name="file" />
+          </div>
 
-    <!-- Part 2 -->
-    <div id="status">Loading model...</div>
-
-    <div id="controller" style="display: none">
-      <div>
-        <section>
-          <button id="train">
-            <span id="train-status">TRAIN MODEL</span>
-          </button>
-          <button id="predict">START PREDICTIONS</button>
+          <div id="loaded-image"></div>
         </section>
 
-        <video
-          autoplay
-          playsinline
-          muted
-          id="webcam"
-          width="224"
-          height="224"
-        ></video>
-      </div>
+        <section id="predictions">
+          <div class="output"></div>
 
-      <div id="buttons-container">
-        <button class="record-button" id="left">Add left sample</button>
-        <p><span id="left-total">0</span> examples</p>
-        <button class="record-button" id="right">Add right sample</button>
-        <p><span id="right-total">0</span> examples</p>
-      </div>
-    </div>
-    <a href="#">record</a>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
+          <div id="predictions"></div>
+        </section>
+      </section> -->
+
+      <!-- part 2 & 3 -->
+      <section id="webcam-section">
+        <section id="input">
+          <h2>Prediction using an image captured from the webcam</h2>
+
+          <button id="predict" disabled>Predict</button>
+          <button title="webcam title" id="webcam">Webcam</button>
+          <button id="pause-for-capture">Capture</button>
+
+          <video id="first-video"></video>
+          <canvas id="canvas"> </canvas>
+        </section>
+
+        <div id="predictions"></div>
+      </section>
+      <div id="app"></div>
   </body>
 </html>

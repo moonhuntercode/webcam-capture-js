@@ -14,8 +14,9 @@ document.querySelector("#app").innerHTML =
     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
       <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
     </a>
-    <h1>Hello Vite!</h1>
+    
     <div class="card">
+    <button id="pause-animation">pause animation</button>
       <button id="counter" type="button"></button>
     </div>
     <p class="read-the-docs">
@@ -25,3 +26,13 @@ document.querySelector("#app").innerHTML =
 `;
 
 setupCounter(document.querySelector("#counter"));
+const circle = document.querySelector("#circle_of_notification_container");
+const animation = circle.animate([{ transform: "scale(2)" }, { transform: "scale(1)" }], {
+  duration: 1000,
+  iterations: Infinity,
+});
+console.log(animation);
+const buttomOfPause = document.querySelector("#pause-animation");
+buttomOfPause.addEventListener("click", () => {
+  animation.pause();
+});

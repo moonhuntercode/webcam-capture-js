@@ -99,6 +99,22 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
-#app{
+/* #app{
 
+} */
+#circle_of_notification_container{
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  display: flex;
+  border-radius: 50%;
+  transform: scale(2);
+}
+#first-video{
+  display: flex;
+  flex-flow: column wrap;
+  place-content: center;
+  visibility: visible;
+  
+  background-color: #646cff;
 }
