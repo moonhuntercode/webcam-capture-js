@@ -1,10 +1,12 @@
 
 # errors
 
-## To summarize:
+### To summarize:
 
 ✅ error solucionado relacionado en utils.js:
-- línea 63  video.srcObject = stream;
+
+- en línea 63  video.srcObject = stream;
+
 - ✅ Correct:
 
 JavaScript

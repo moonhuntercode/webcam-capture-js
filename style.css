@@ -1,3 +1,4 @@
+/* estilos.css */
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -20,6 +21,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-align: center;
   }
   body,html{
     width: var(--one-hundred-percent);
@@ -37,14 +39,14 @@ a {
 }
 
 body {
-  display: flex;
-  flex-flow: column wrap;
-  place-content: center;
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 3.2vh;
   line-height: 1.1;
+  margin-top: 4-0px;
 }
 
 .logo {
@@ -111,10 +113,22 @@ button:focus-visible {
   transform: scale(2);
 }
 #first-video{
-  display: flex;
+  display: inline-flex;
+
   flex-flow: column wrap;
   place-content: center;
   visibility: visible;
   
   background-color: #646cff;
+}
+canvas{
+  position: absolute; 
+}
+footer{
+  width: 100%;
+  height:200px;
+  /* overflow: scroll; */
+}
+deepl-input-controller{
+  position: absolute;
 }

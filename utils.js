@@ -1,3 +1,4 @@
+// utils.js
 // Part 1
 // -----------
 
@@ -51,11 +52,11 @@ export const startWebcam = (video) => {
     // mostrar el número de cámaras encontradas
     console.log(`Se encontraron ${cameras.length} cámaras.`);
     // seleccionar la primera cámara por defecto(puedo cambiar esto)
-    const selectedCameraId = cameras[0].deviceId;
+    const selectedCameraId = cameras[1].deviceId;
     // solicitar acceso a la cámara seleccionada
     return navigator.mediaDevices
       .getUserMedia({
-        video: { deviceId: { exact: selectedCameraId }, width: 320, height: 240 },
+        video: { deviceId: { exact: selectedCameraId }, width: 320, height: 200 },
         audio: false,
       })
       .then((stream) => {
@@ -68,7 +69,7 @@ export const startWebcam = (video) => {
       })
       .catch((err) => {
         /* handle the error */
-        console.log(err);
+        console.error(`Error: ${err}`);
       });
   });
 };
